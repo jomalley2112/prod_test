@@ -6,44 +6,44 @@
 			%td.field= f.text_field :name
 	
 		%tr
-			%td= f.label :birthday
-			%td.field= f.date_select :birthday
+			%td= f.hd_label :birthday
+			%td.field= f.date_picker :birthday, :hd_opts => { :year_range => "-120:+0" }
 	
 		%tr
-			%td= f.label :lunchtime
-			%td.field= f.time_select :lunchtime
+			%td= f.hd_label :lunchtime
+			%td.field= f.time_picker :lunchtime
 	
 		%tr
-			%td= f.label :apocalypse
-			%td.field= f.datetime_select :apocalypse
+			%td= f.hd_label :apocalypse
+			%td.field= f.datetime_picker :apocalypse, :hd_opts => { :change_year => true, :change_month => true }
 	
 		%tr
-			%td= f.label :epoch
-			%td.field= f.datetime_select :epoch
+			%td= f.hd_label :epoch
+			%td.field= f.datetime_picker :epoch
 	
 		%tr
-			%td= f.label :christmas
-			%td.field= f.date_select :christmas
+			%td= f.hd_label :christmas
+			%td.field= f.date_picker :christmas
 	
 		%tr
-			%td= f.label :alarm_setting
-			%td.field= f.time_select :alarm_setting
+			%td= f.hd_label :alarm_setting
+			%td.field= f.time_picker :alarm_setting
 	
 		%tr
-			%td= f.label :suppertime
-			%td.field= f.time_select :suppertime
+			%td= f.hd_label :suppertime
+			%td.field= f.time_picker :suppertime
 	
 		%tr
-			%td= f.label :beer_oclock
-			%td.field= f.time_select :beer_oclock
+			%td= f.hd_label :beer_oclock
+			%td.field= f.time_picker :beer_oclock
 	
 		%tr
-			%td= f.label :sleepytime
-			%td.field= f.time_select :sleepytime
+			%td= f.hd_label :sleepytime
+			%td.field= f.time_picker :sleepytime
 	
 		%tr
-			%td= f.label :party_time
-			%td.field= f.time_select :party_time
+			%td= f.hd_label :party_time
+			%td.field= f.time_picker :party_time
 	
 		%tr
 			%td= f.label :easter

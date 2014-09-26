@@ -14,3 +14,9 @@ en:
         zero: No %{model} found
         one: Displaying <b>1</b> %{model}
         other: Displaying <b>all&nbsp;%{count}</b> %{model}
+  date:
+    formats:
+      default: "%B %-d, %Y"
+  time:
+    formats:
+      default: "%-l:%M %P"
