@@ -1,0 +1,85 @@
+%h4 Listing Schedules
+%table.outer-list#top-level
+	%thead 
+		
+		%tr.header-row
+			%td{ colspan: "14" }
+				%table{style: "width: 100%"}
+					%tr
+						%td= render "sort_form" #, :opts => @sort_dropdown_opts
+						%td{ style: "text-align: right" }= render "search_form"
+		
+		%tr.header-row{	style: "font-weight: bold;" }
+		
+			%td Name
+		
+			%td Birthday
+		
+			%td Lunchtime
+		
+			%td Apocalypse
+		
+			%td Epoch
+		
+			%td Christmas
+		
+			%td Alarm setting
+		
+			%td Suppertime
+		
+			%td Beer oclock
+		
+			%td Sleepytime
+		
+			%td Party time
+		
+			%td Easter
+		
+		
+			%td.link_col
+		
+		
+			%td.link_col
+		
+	%tbody.items
+		- @schedules.each do |schedule|
+			%tr.item
+			 
+				%td= schedule.name
+			 
+				%td= schedule.birthday
+			 
+				%td= schedule.lunchtime
+			 
+				%td= schedule.apocalypse
+			 
+				%td= schedule.epoch
+			 
+				%td= schedule.christmas
+			 
+				%td= schedule.alarm_setting
+			 
+				%td= schedule.suppertime
+			 
+				%td= schedule.beer_oclock
+			 
+				%td= schedule.sleepytime
+			 
+				%td= schedule.party_time
+			 
+				%td= schedule.easter
+			
+			
+				%td= link_to "Edit", edit_schedule_path(schedule)
+			
+			
+				%td= link_to "Del", schedule, method: :delete, data: {confirm: "Are you sure?"}  
+			
+	
+		%tr#pagination-row
+			%td{:colspan => '14', :class => "pagination-container"}
+				= render partial: 'pagination', locals: { :coll => @schedules }
+	
+%br/ 
+
+= link_to 'New Schedule', new_schedule_path

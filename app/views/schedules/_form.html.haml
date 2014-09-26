@@ -1,0 +1,59 @@
+=form_for @schedule do |f|
+	%table.outer
+	
+		%tr
+			%td= f.label :name
+			%td.field= f.text_field :name
+	
+		%tr
+			%td= f.label :birthday
+			%td.field= f.date_select :birthday
+	
+		%tr
+			%td= f.label :lunchtime
+			%td.field= f.time_select :lunchtime
+	
+		%tr
+			%td= f.label :apocalypse
+			%td.field= f.datetime_select :apocalypse
+	
+		%tr
+			%td= f.label :epoch
+			%td.field= f.datetime_select :epoch
+	
+		%tr
+			%td= f.label :christmas
+			%td.field= f.date_select :christmas
+	
+		%tr
+			%td= f.label :alarm_setting
+			%td.field= f.time_select :alarm_setting
+	
+		%tr
+			%td= f.label :suppertime
+			%td.field= f.time_select :suppertime
+	
+		%tr
+			%td= f.label :beer_oclock
+			%td.field= f.time_select :beer_oclock
+	
+		%tr
+			%td= f.label :sleepytime
+			%td.field= f.time_select :sleepytime
+	
+		%tr
+			%td= f.label :party_time
+			%td.field= f.time_select :party_time
+	
+		%tr
+			%td= f.label :easter
+			%td.field= f.date_select :easter
+	
+		%tr
+		
+			%td{:colspan => "2", :style => "text-align: center;"}
+				= f.submit "Save & Back to List", name: "btn_index"
+				= f.submit "Save & Reload", name: "btn_reload"
+		
+%br/
+= link_to "Back", schedules_path

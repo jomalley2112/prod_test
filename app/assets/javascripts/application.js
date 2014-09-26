@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require hot_date_rails
 //= require turbolinks
 //= require_tree .
