@@ -12,7 +12,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'hot_date_rails'
-gem 'controller_scaffolding'
+gem 'controller_scaffolding', 
+	github: 'jomalley2112/controller_scaffolding', ref: '0caf5bfb5801e5cd946e785b19df89adcb90470e'
 
 group :development do #, :test
 	gem 'sqlite3'
